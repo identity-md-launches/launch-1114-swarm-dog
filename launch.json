@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "SDOGToken",
+    "name": "Swarm dog",
+    "symbol": "SDOG",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "125270724187523965593206900"
+  },
+  "economics": {
+    "poolBps": 9000,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0x000000000000000000000000000000000000dead"
+  },
+  "notes": "Ethereum mainnet. The constructor mints the full 1e27 units to its deployer. The launch factory distributes the swarm's 10% through its Merkle distributor, seeds the 90% pool allocation through Uniswap v4 PoolManager 0x000000000004444c5dc75cB358380D2e3dE08A90, and forwards any remainder to economics.remainderTo. Transfers are fee-free and unrestricted by roles. initialPrice is provenance-only sqrtPriceX96 for paired-currency minor units per SDOG minor unit with SDOG as currency0; the deployer derives the actual opening price from the economics and deployed currency order. No token owner, admin, further minting, or burning."
+}
